@@ -10,7 +10,8 @@
   <form  method="post">
     <input type="text" name="email" placeholder="Email"><br><br>
     <input type="text" name="password" placeholder="Password"><br><br>
-    <input type="submit" value="Insert" name="login">
+    <input type="submit" value="Login" name="login">
+<a href="insert.php">Sign up</a>
 </form>
 </body>
 </html>

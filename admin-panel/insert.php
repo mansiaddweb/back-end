@@ -25,6 +25,7 @@ if(isset($_POST['insert']))
         if($query)
         {
             echo "data inserted";
+header('Location:login.php');
         }
         else{
             echo "error in insertion";
