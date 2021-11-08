@@ -5,17 +5,15 @@
     session_start();
     if($_SESSION['email']==''){
         header('Location:login.php');
-}else{
-    $sid = $_GET['id'];
+}
+else
+{
+    $sid = $_GET['sid'];
 
     include "includecon.php";
-    
-    
-    // getting the previous info
+        // getting the previous info
     $sql = "select * from student where id='$sid'";
-
 	$query = mysqli_query($con,$sql) or die("query failed.");
-
     $row_details = mysqli_fetch_array($query);
     $sid= $row_details['id'];
     $sname = $row_details['Name'];
@@ -30,42 +28,35 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="signup.css">
-	<title>sign-up</title>
+		<title>sign-up</title>
+        <link rel="stylesheet" href="style.css">
 </head>
-<body>
-
-
-
-	<div class="form">
+<body style="background-color:grey">
+	
 		<form action="" method="post">
-			<input type="text" name="Name" value="<?php echo $sname; ?>" ><br>
-			<input type="email" name="email" value="<?php echo $semail; ?>" ><br>
-			<!-- <input type="tel" name="phone" value="<?php echo $vphone; ?>"><br> -->
-			<!-- <textarea name="address" rows="5" cols="25"><?php echo $vaddress; ?></textarea><br> -->
-			<input type="password" name="password" value="<?php echo $spassword; ?>"><br>
-			<input type="submit" name="submit" value="submit">
-			<input type="reset" name="">
+        <input type="submit" value="Logout" name="logout" class="logout">
+        <div class="up">
+        
+			Name : <input type="text" name="Name" value="<?php echo $sname; ?>" class="txt"><br>
+			Email: <input type="email" name="email" value="<?php echo $semail; ?>" class="txt"><br>
+			Password :	<input type="password" name="password" value="<?php echo $spassword; ?>" class="txt"><br>
+		<div style="margin-top:30px">
+            <input type="submit" name="submit" value="submit" class="btn">
+			<input type="reset" name="" class="btn">
+</div></div>
 		</form>
-	</div>
-
-</body>
+	</body>
 </html>
 
 <?php 
-$udid = $_POST['id'];
-    $udname = $_POST['Name'];
-    $udemail = $_POST['email'];
-    // $udphone = $_POST['phone'];
-    // $udaddress = $_POST['address'];
+if(isset($_POST['submit']))
+{    $udname = $_POST['Name'];
+     $udemail = $_POST['email'];
     $udpassword = $_POST['password'];
-    // echo $udaddress;
-
     include "includecon.php";
-$query="update student set Name='$udname',email= '$udemail',password='$udpassword' where id=$udid";
-echo $query;
-    $usql = mysqli_query($con,$query) or die("second query failed.");
-
+$uquery="update student set Name='$udname',email= '$udemail',password=$udpassword where id=$sid";
+// echo $uquery;
+    $usql = mysqli_query($con,$uquery) or die("second query failed.");
 		if($usql){
 			echo "data inserted successfully.";
             header('Location:selecttable.php');
@@ -73,5 +64,10 @@ echo $query;
 			echo "failed to update data.";
 		}
     
+}
+if(isset($_POST['logout'])){
+    header("Location:session.php");
+}
+
 }
 ?>

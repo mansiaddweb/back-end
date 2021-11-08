@@ -1,0 +1,68 @@
+.login{
+    margin:100px 400px;
+    width: 350px;
+    padding: 3.5rem;
+    height:270px;
+    background-color:rgb(150, 148, 148);
+}
+.bttn{
+    padding-top: 2rem;
+    padding-left: .5rem;
+}
+.btn{
+    height: 35px;
+    color: wheat;
+    font-size: 1.25rem;
+    margin: 5px;
+    width: 290px;
+    background-color: rgb(15, 15, 24);
+}
+.txt{
+    height: 30px;
+    font-size: 1.2rem;
+    width: 300px;
+}
+.sign{
+    height: 25px;
+    margin: 7px;
+    font-size: 1rem;
+}
+table{
+    margin: 100px 310px;
+    background-color: rgb(184, 142, 95);
+    border-radius: 1rem;
+    color: rgb(250, 248, 244);
+    height: 270px;
+    font-size: 1.3rem;
+    width: 650px;
+}
+td{
+    padding: .5rem;
+    /* border-color: black; */
+    border-bottom: blue;
+}
+a{
+    text-decoration: none;
+    color: rgb(131, 96, 27);
+    font-size: 1.5rem;
+    
+    
+}
+.logout{
+    float: right;
+    height: 35px;
+    padding: 0;
+    margin-top: 0;
+    width: 140px;
+    font-size: 1.2rem;
+    background-color: rgb(3, 30, 31);
+    color: rgb(230, 217, 217);
+}
+.up{
+    margin:100px 400px;
+    width: 350px;
+    padding: 3.5rem;
+    height:270px;
+   background-color: antiquewhite;  
+   font-size: 1.5rem; 
+}

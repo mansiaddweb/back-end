@@ -5,13 +5,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body style="background-color:gray">
   <form  method="post">
-    <input type="text" name="email" placeholder="Email"><br><br>
-    <input type="text" name="password" placeholder="Password"><br><br>
-    <input type="submit" value="Login" name="login">
-<a href="insert.php">Sign up</a>
+    <div class="login">
+          <input type="text" name="email" placeholder="Email" class="txt"><br><br>
+    <input type="text" name="password" placeholder="Password" class="txt"><br><br>
+  <div class="bttn">
+    <input type="submit" value="Login" name="login" class="btn"><br><br>
+  <input type="submit" value="Sign Up" name="signup" class="btn">
+</div></div>
 </form>
 </body>
 </html>
@@ -36,6 +40,13 @@ include "includecon.php";
   else{
     echo "login failed ";
   }
-  mysqli_close($con);
-}
+ }
+ if(isset($_POST['signup'])){
+  //  echo "signup";
+   header("Location:insert.php");
+ }
+
+
+ mysqli_close($con);
+
 ?>
