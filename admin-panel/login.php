@@ -12,6 +12,7 @@
     <div class="login">
           <input type="text" name="email" placeholder="Email" class="txt"><br><br>
     <input type="text" name="password" placeholder="Password" class="txt"><br><br>
+    <input type="checkbox" name="remember" id="">Remember Me
   <div class="bttn">
     <input type="submit" value="Login" name="login" class="btn"><br><br>
   <input type="submit" value="Sign Up" name="signup" class="btn">
@@ -31,7 +32,7 @@ include "includecon.php";
   $query = mysqli_query($con, $sql) or die("query failed.");
   $rows=mysqli_num_rows($query);
   $row=mysqli_fetch_array($query);
-  if($query>0){
+  if($rows>0){
   session_start();
   $_SESSION['email']=$semail;
   $_SESSION['Name']=$row['Name'];
@@ -44,6 +45,10 @@ include "includecon.php";
  if(isset($_POST['signup'])){
   //  echo "signup";
    header("Location:insert.php");
+ }
+ if(isset($_POST['remember'])){
+   setcookie("email" ,$semail);
+   setcookie("password",$spassword);
  }
 
 

@@ -27,8 +27,8 @@ else
 
      $Name=$_SESSION['Name'];
     $email=$_SESSION['email'];
-    $query1=mysqli_query($con, "select * from student where email='$semail'") or die("error in query");
-    $row1= mysqli_fetch_array($query1);
+    // $query1=mysqli_query($con, "select * from student where email='$semail'") or die("error in query");
+    // $row1= mysqli_fetch_array($query1);
 
        echo "<h1>Hello ".$Name."</h1>";
     $query=mysqli_query($con, "select * from student") or die("error in query");
