@@ -1,0 +1,131 @@
+.box{
+    margin: 30px 400px;
+    padding: 2rem;
+    border: 3px;
+    background-color: rgb(243, 191, 124);
+    width: 400px;
+    border-radius: 1rem;
+}
+.form-control{
+    height: 35px;
+    width: 390px;
+    margin: 5PX;
+    font-size: 1rem;
+}
+.btn{
+    height: 35px;
+    width: 370px;
+    margin: 20px 17px;
+    font-size: larger;
+    text-align: center;
+    background-color: rgb(143, 107, 61);
+    color: white;
+}
+.row{
+    display: flex;
+}
+.picc img{
+    width: 370px;
+    margin: 30px;
+    display: flex;
+    height: 250px;
+    /* box-shadow: 30px black; */
+    border-radius: 1rem;
+    border: 2px solid rgb(151, 111, 111);
+}
+img:hover{
+    
+    margin-top: .2px;
+    
+}
+.lg{
+
+    width: 600;
+    padding: 1rem 3rem;
+    font-size: 1.5rem;
+    background: burlywood;
+    border-radius: 2rem;
+    margin: 30px 300px;
+
+}
+a:hover{
+    /* background-color: rgb(241, 220, 195); */
+    border-radius: 1.5rem;
+    color: rgb(37, 10, 10);
+    height: 1rem;
+}
+.col-3{
+    text-align: center;
+    color: black;
+    font-size: 3rem;
+    font-weight: 400 ;
+    font-family: 'Shalimar', cursive;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+table{
+    width: 99%;
+    background-color: blanchedalmond;
+    border-top: burlywood;
+}
+td{
+    text-align: center;
+    border-top: solid rgb(238, 227, 223);
+    font-size: 1.5rem;
+}
+th{
+    font-size: 1.7rem;
+    font-family: sans-serif;
+}
+.container-fluid{
+    background-color: rgb(107, 89, 64);
+    font-size: 1.5rem;
+    height: 65px;
+    display: flex;
+    
+}
+.navbar-brand{
+    color: burlywood;
+    font-size: 3rem;
+}
+.navbar-nav{
+    position: relative;
+
+    margin: 20px 150px 20px 113px;
+
+        
+}
+.nav-link{
+    padding: 1rem;
+    color: white;
+
+}
+/* .kkl{
+    margin: 50px 200px;
+    border: 2px solid rgb(243, 206, 127);
+
+} */
+/* .form-group{
+    width: ;
+} */
+.kl {
+    width: 500px;
+    height: 700px;
+    border: 2px solid rgb(248, 217, 116);
+    margin: 30px 350px;
+    padding: .02rem 5rem;
+    font-size: 1.5rem;
+    border-radius: 2rem;
+    background-color: burlywood;
+}
+.sign{
+    
+    width: 490;
+    height: 30;
+    border: 1px solid black;
+    margin-left: 50px;
+    font-size: 1.4rem;
+
+}
