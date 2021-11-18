@@ -36,7 +36,7 @@
 
     <section class="box">
 <h2 class="text-center">Create Your Account</h2>
-          <form class="text-left clearfix" action="login.php">
+          <form action="login.php">
             <div class="form-group">
               <input type="text" class="form-control"  placeholder="First Name">
             </div>

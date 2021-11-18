@@ -334,7 +334,7 @@ FACEBOOK: https://www.facebook.com/themefisher
         		<div class="post">
 	<div class="post-media post-thumb">
 		<a href="blog-single.html">
-			<img src="images/b1.jpeg" alt="">
+			<img src="images/b1.jpeg" width=700px height=500px>
 		</a>
 	</div>
 	<h2 class="post-title"><a href="blog-single.html">How To Wear Bright Shoes</a></h2>

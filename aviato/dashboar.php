@@ -1,3 +1,13 @@
+<?php 
+error_reporting(0);
+    ob_start();
+
+                    session_start();
+    if($_SESSION['email']==''){
+        header('Location:login.php');
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,6 +19,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Shalimar&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/3dfc59ae00.js" crossorigin="anonymous"></script>
 </head>
 <body >
 <form action="" method="post">
@@ -48,14 +59,14 @@ include "con.php";
         $simg= $row['img_url'];
     
         ?>
-        <a href= "home.php?id=<?php echo $sid;?>">
+        <a href= "c1.php?id=<?php echo $sid;?>">
                       <div class="col picc"><img src= "<?php echo $simg; ?> " ></div>
                         <div class="col-3"><?php echo $sname;?></div>
     </a>
        <?php
     }
     if(isset($_POST['logout'])){
-        header("Location:session.php");
+        header("Location:login.php");
     }
     
     mysqli_close($con);
@@ -63,5 +74,11 @@ include "con.php";
     ?>
     </div>
     </form>
+
+    <!-- footer s -->
+
+
+
+    <!-- foorterve -->
 </body>
 </html>

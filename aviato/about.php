@@ -316,10 +316,10 @@ FACEBOOK: https://www.facebook.com/themefisher
 		<div class="row">
 			<div class="col-md-12">
 				<div class="content">
-					<h1 class="page-name">Blog</h1>
+					<h1 class="page-name">About Us</h1>
 					<ol class="breadcrumb">
 						<li><a href="index.html">Home</a></li>
-						<li class="active">blog</li>
+						<li class="active">about us</li>
 					</ol>
 				</div>
 			</div>
@@ -327,193 +327,88 @@ FACEBOOK: https://www.facebook.com/themefisher
 	</div>
 </section>
 
-<div class="page-wrapper">
+<section class="about section">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6">
+				<img class="img-responsive" src="images/about-us.jpg">
+			</div>
+			<div class="col-md-6">
+				<h2 class="mt-40">About Our Shop</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius enim, accusantium repellat ex autem numquam iure officiis facere vitae itaque.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam qui vel cupiditate exercitationem, ea fuga est velit nulla culpa modi quis iste tempora non, suscipit repellendus labore voluptatem dicta amet?</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam qui vel cupiditate exercitationem, ea fuga est velit nulla culpa modi quis iste tempora non, suscipit repellendus labore voluptatem dicta amet?</p>
+				<a href="contact.html" class="btn btn-main mt-20">Download Company Profile</a>
+			</div>
+		</div>
+		<div class="row mt-40">
+			<div class="col-md-3 text-center">
+				<img src="images/about/awards-logo.png">
+			</div>
+			<div class="col-md-3 text-center">
+				<img src="images/about/awards-logo.png">
+			</div>
+			<div class="col-md-3 text-center">
+				<img src="images/about/awards-logo.png">
+			</div>
+			<div class="col-md-3 text-center">
+				<img src="images/about/awards-logo.png">
+			</div>
+		</div>
+	</div>
+</section>
+<section class="team-members ">
+	<div class="container">
+		<div class="row">
+			<div class="title"><h2>Team Members</h2></div>
+		</div>
+		<div class="row">
+			<div class="col-md-3">
+				<div class="team-member text-center">
+					<img class="img-circle" src="images/a1.jpeg">
+					<h4>Jonathon Andrew</h4>
+					<p>Founder</p>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="team-member text-center">
+					<img class="img-circle" src="images/a2.jpeg">
+					<h4>Adipisci Velit</h4>
+					<p>Developer</p>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="team-member text-center">
+					<img class="img-circle" src="images/a3.jpeg">
+					<h4>John Fexit</h4>
+					<p>Shop Manager</p>
+				</div>
+			</div>
+			<div class="col-md-3">
+				<div class="team-member text-center">
+					<img class="img-circle" src="images/a4.jpeg">
+					<h4>John Fexit</h4>
+					<p>Shop Manager</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+
+<div class="section video-testimonial bg-1 overly-white text-center mt-50">
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
-        		<div class="post">
-	<div class="post-media post-thumb">
-		<a href="blog-single.html">
-			<img src="images/b1.jpeg" alt="">
-		</a>
-	</div>
-	<h2 class="post-title"><a href="blog-single.html">How To Wear Bright Shoes</a></h2>
-	<div class="post-meta">
-		<ul>
-			<li>
-				<i class="tf-ion-ios-calendar"></i> 20, MAR 2017
-			</li>
-			<li>
-				<i class="tf-ion-android-person"></i> POSTED BY ADMIN
-			</li>
-			<li>
-				<a href="#!"><i class="tf-ion-ios-pricetags"></i> LIFESTYLE</a>,<a href="#!"> TRAVEL</a>, <a href="#!">FASHION</a>
-			</li>
-			<li>
-				<a href="#!"><i class="tf-ion-chatbubbles"></i> 4 COMMENTS</a>
-			</li>
-		</ul>
-	</div>
-	<div class="post-content">
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit vitae placeat ad architecto nostrum asperiores vel aperiam, veniam eum nulla. Maxime cum magnam, adipisci architecto quibusdam cumque veniam fugiat quae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio vitae ab doloremque accusamus sit, eos dolorum officiis a perspiciatis aliquid. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, facere. </p>
-		<a href="blog-single.html" class="btn btn-main">Continue Reading</a>
-	</div>
-
-</div>
-<div class="post">
-	<div class="post-media post-thumb">
-		<a href="blog-single.html">
-			<img src="images/blog/blog-post-2.jpg" alt="">
-		</a>
-	</div>
-	<h2 class="post-title"><a href="blog-single.html">Two Ways To Wear Straight Shoes</a></h2>
-	<div class="post-meta">
-		<ul>
-			<li>
-				<i class="tf-ion-ios-calendar"></i> 20, MAR 2017
-			</li>
-			<li>
-				<i class="tf-ion-android-person"></i> POSTED BY ADMIN
-			</li>
-			<li>
-				<a href="#!"><i class="tf-ion-ios-pricetags"></i> LIFESTYLE</a>,<a href="#!"> TRAVEL</a>, <a href="#!">FASHION</a>
-			</li>
-			<li>
-				<a href="#!"><i class="tf-ion-chatbubbles"></i> 4 COMMENTS</a>
-			</li>
-		</ul>
-	</div>
-	<div class="post-content">
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit vitae placeat ad architecto nostrum asperiores vel aperiam, veniam eum nulla. Maxime cum magnam, adipisci architecto quibusdam cumque veniam fugiat quae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio vitae ab doloremque accusamus sit, eos dolorum officiis a perspiciatis aliquid. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, facere</p>
-		<a href="blog-single.html" class="btn btn-main">Continue Reading</a>
-	</div>
-</div>
-<div class="post">
-	<div class="post-media post-thumb">
-		<a href="blog-single.html">
-			<img src="images/blog/blog-post-3.jpg" alt="">
-		</a>
-	</div>
-	<h2 class="post-title"><a href="blog-single.html">Making A Denim Statement</a></h2>
-	<div class="post-meta">
-		<ul>
-			<li>
-				<i class="tf-ion-ios-calendar"></i> 20, MAR 2017
-			</li>
-			<li>
-				<i class="tf-ion-android-person"></i> POSTED BY ADMIN
-			</li>
-			<li>
-				<a href="#!"><i class="tf-ion-ios-pricetags"></i> LIFESTYLE</a>,<a href="#!"> TRAVEL</a>, <a href="#!">FASHION</a>
-			</li>
-			<li>
-				<a href="#!"><i class="tf-ion-chatbubbles"></i> 4 COMMENTS</a>
-			</li>
-		</ul>
-	</div>
-	<div class="post-content">
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit vitae placeat ad architecto nostrum asperiores vel aperiam, veniam eum nulla. Maxime cum magnam, adipisci architecto quibusdam cumque veniam fugiat quae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio vitae ab doloremque accusamus sit, eos dolorum officiis a perspiciatis aliquid. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, facere</p>
-		<a href="blog-single.html" class="btn btn-main">Continue Reading</a>
-	</div>
-</div>
-
-<div class="post">
-	<h2 class="post-title"><a href="blog-single.html">Standard Text Post</a></h2>
-	<div class="post-meta">
-		<ul>
-			<li>
-				<i class="tf-ion-ios-calendar"></i> 20, MAR 2017
-			</li>
-			<li>
-				<i class="tf-ion-android-person"></i> POSTED BY ADMIN
-			</li>
-			<li>
-				<a href="#!"><i class="tf-ion-ios-pricetags"></i> LIFESTYLE</a>,<a href="#!"> TRAVEL</a>, <a href="#!">FASHION</a>
-			</li>
-			<li>
-				<a href="#!"><i class="tf-ion-chatbubbles"></i> 4 COMMENTS</a>
-			</li>
-		</ul>
-	</div>
-	<div class="post-content">
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit vitae placeat ad architecto nostrum asperiores vel aperiam, veniam eum nulla. Maxime cum magnam, adipisci architecto quibusdam cumque veniam fugiat quae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio vitae ab doloremque accusamus sit, eos dolorum officiis a perspiciatis aliquid. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, facere</p>
-		<a href="blog-single.html" class="btn btn-main">Continue Reading</a>
-	</div>
-</div>
-<div class="post">
-	<div class="post-media post-media-audio">
-		<iframe src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/115637399&amp;color=ff5500&amp;auto_play=false&amp;show_artwork=true" class="DRAGDIS_iframe"></iframe>
-	</div>
-	<h2 class="post-title"><a href="blog-single.html">Standard Audio Post</a></h2>
-	<div class="post-meta">
-		<ul>
-			<li>
-				<i class="tf-ion-ios-calendar"></i> 20, MAR 2017
-			</li>
-			<li>
-				<i class="tf-ion-android-person"></i> POSTED BY ADMIN
-			</li>
-			<li>
-				<a href="#!"><i class="tf-ion-ios-pricetags"></i> LIFESTYLE</a>,<a href="#!"> TRAVEL</a>, <a href="#!">FASHION</a>
-			</li>
-			<li>
-				<a href="#!"><i class="tf-ion-chatbubbles"></i> 4 COMMENTS</a>
-			</li>
-		</ul>
-	</div>
-	<div class="post-content">
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit vitae placeat ad architecto nostrum asperiores vel aperiam, veniam eum nulla. Maxime cum magnam, adipisci architecto quibusdam cumque veniam fugiat quae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio vitae ab doloremque accusamus sit, eos dolorum officiis a perspiciatis aliquid. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, facere</p>
-		<a href="blog-single.html" class="btn btn-main">Continue Reading</a>
-	</div>
-</div>
-<div class="post">
-	<div class="post-media post-media-audio">
-		<iframe height="400" src="https://www.youtube.com/embed/Ljik3zsGNF4"  allowfullscreen></iframe>
-	</div>
-	<h2 class="post-title"><a href="blog-single.html">Standard Video Post</a></h2>
-	<div class="post-meta">
-		<ul>
-			<li>
-				<i class="tf-ion-ios-calendar"></i> 20, MAR 2017
-			</li>
-			<li>
-				<i class="tf-ion-android-person"></i> POSTED BY ADMIN
-			</li>
-			<li>
-				<a href="#!"><i class="tf-ion-ios-pricetags"></i> LIFESTYLE</a>,<a href="#!"> TRAVEL</a>, <a href="#!">FASHION</a>
-			</li>
-			<li>
-				<a href="#!"><i class="tf-ion-chatbubbles"></i> 4 COMMENTS</a>
-			</li>
-		</ul>
-	</div>
-	<div class="post-content">
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit vitae placeat ad architecto nostrum asperiores vel aperiam, veniam eum nulla. Maxime cum magnam, adipisci architecto quibusdam cumque veniam fugiat quae. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio vitae ab doloremque accusamus sit, eos dolorum officiis a perspiciatis aliquid. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod, facere</p>
-		<a href="blog-single.html" class="btn btn-main">Continue Reading</a>
-	</div>
-</div>
-<div class="text-center">
-	<ul class="pagination post-pagination">
-		<li><a href="#!">Prev</a>
-		</li>
-		<li class="active"><a href="#!">1</a>
-		</li>
-		<li><a href="#!">2</a>
-		</li>
-		<li><a href="#!">3</a>
-		</li>
-		<li><a href="#!">4</a>
-		</li>
-		<li><a href="#!">5</a>
-		</li>
-		<li><a href="#!">Next</a>
-		</li>
-	</ul>
-</div>
-      		</div>
+				<h2>Video presentation</h2>
+				<a class="play-icon" href="https://www.youtube.com/watch?v=oyEuk8j8imI&amp;rel=0" data-toggle="lightbox">
+					<i class="tf-ion-ios-play"></i>
+				</a>
+			</div>
 		</div>
 	</div>
 </div>
+
 
 
 <footer class="footer section text-center">

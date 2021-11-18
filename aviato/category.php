@@ -11,9 +11,9 @@
     <a class="navbar-brand">Aviato</a>
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div>
       <div class="navbar-nav">
-        <a class="nav-link active" aria-current="page" href="dashboar.php">Dashboard</a>
+        <a class="nav-link "href="dashboar.php">Dashboard</a>
         <a class="nav-link" href="#">Shop</a>
         <a class="nav-link" href="#">Pages</a>
         <a class="nav-link" href="#">Blog</a>

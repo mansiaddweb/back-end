@@ -1,9 +1,14 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 .box{
     margin: 30px 400px;
     padding: 2rem;
     border: 3px;
     background-color: rgb(243, 191, 124);
-    width: 400px;
+    width: 450px;
     border-radius: 1rem;
 }
 .form-control{
@@ -40,7 +45,7 @@ img:hover{
 }
 .lg{
 
-    width: 600;
+    width: 680;
     padding: 1rem 3rem;
     font-size: 1.5rem;
     background: burlywood;
@@ -92,7 +97,7 @@ th{
 }
 .navbar-nav{
     position: relative;
-
+color:white;
     margin: 20px 150px 20px 113px;
 
         
@@ -111,7 +116,7 @@ th{
     width: ;
 } */
 .kl {
-    width: 500px;
+    width: 690px;
     height: 700px;
     border: 2px solid rgb(248, 217, 116);
     margin: 30px 350px;
@@ -127,5 +132,25 @@ th{
     border: 1px solid black;
     margin-left: 50px;
     font-size: 1.4rem;
+
+}
+.footer {
+    background: #F7F7F7;
+    padding: 50px 0;
+}
+.text-center {
+    text-align: center;
+}
+ul {
+    list-style-type: none;
+}
+.sp{
+    width: 100%;
+}
+.card-title{
+    text-align: center;
+    font-size: 3rem;
+    color: rgb(119, 87, 44);
+    font-family: poppins;
 
 }
