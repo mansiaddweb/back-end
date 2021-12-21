@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simple Map</title>
+    <meta name="google-signin-client_id" content="70911442448-10viu8k104t93ofbg8gnj29vis34ao5h.apps.googleusercontent.com">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="./api.js"></script>
+    <style>
+        #map{
+            height: 400px;
+            width: 890px;
+        }
+    </style>
+  </head>
+  <body>
+    
+    <!-- <div class="translator"> </div> -->
+    <div id="google_translate_element"></div>
+    <p>This example displays a vertical translate button.</p>
+
+    <div class="weather"><input type="text" name="" id="city">
+      <button id="search">search</button>
+      <p class="city">Weather in jaipur</p>
+    <p class="temp">Temp:</p></div>
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+      <h1>My Google Map</h1>
+    <div id="map"></div>
+   
+      <script src="login.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="translator.js"></script>
+    <!-- <script type="text/javascript">
+      function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+      }
+      </script> -->
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    
+    <script src="weather.js"></script>
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkOBNmvqqpELmJMESZg3JeDeWkgDS77f8&callback=initMap"
+      async
+    ></script>
+  </body>
+</html>
