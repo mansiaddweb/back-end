@@ -602,4 +602,266 @@ db.directory.insertMany([{'id':91,'name':'Ansh','fname':'vikas','address':'beawe
 > 
 
 
+						QUERIES
+1
+> db.employee.find({},{dept: 1, _id: 0})
+{ "dept" : "silicon valley" }
+{ "dept" : "dynamite" }
+{ "dept" : "silicon valley" }
+{ "dept" : "tokyo" }
+{ "dept" : "dynamite" }
+{ "dept" : "tokyo" }
+{ "dept" : "silicon valley" }
+{ "dept" : "batch5" }
+{ "dept" : "silicon valley" }
+{ "dept" : "batch5" }
+> 
+
+2
+> db.employee.find()
+{ "_id" : ObjectId("61cab5fce1c33af5e5507c19"), "id" : 11, "name" : "Mansi", "mobile" : 9879898912, "dept" : "silicon valley", "salary" : 20000 }
+{ "_id" : ObjectId("61cab5fce1c33af5e5507c1a"), "id" : 12, "name" : "Vansh", "mobile" : 8272798912, "dept" : "dynamite", "salary" : 25000 }
+{ "_id" : ObjectId("61cab5fce1c33af5e5507c1b"), "id" : 13, "name" : "Vanshika", "mobile" : 7988898912, "dept" : "silicon valley", "salary" : 29000 }
+{ "_id" : ObjectId("61cab5fce1c33af5e5507c1c"), "id" : 14, "name" : "Vinu", "mobile" : 9888898912, "dept" : "tokyo", "salary" : 33000 }
+{ "_id" : ObjectId("61cab5fce1c33af5e5507c1d"), "id" : 15, "name" : "Vinita", "mobile" : 9555558912, "dept" : "dynamite", "salary" : 22000 }
+{ "_id" : ObjectId("61cab5fce1c33af5e5507c1e"), "id" : 16, "name" : "Vinay", "mobile" : 8999889912, "dept" : "tokyo", "salary" : 20500 }
+{ "_id" : ObjectId("61cab5fce1c33af5e5507c1f"), "id" : 17, "name" : "Vinit", "mobile" : 8779898912, "dept" : "silicon valley", "salary" : 20900 }
+{ "_id" : ObjectId("61cab5fce1c33af5e5507c20"), "id" : 18, "name" : "khushi", "mobile" : 9898988812, "dept" : "batch5", "salary" : 2000 }
+{ "_id" : ObjectId("61cab5fce1c33af5e5507c21"), "id" : 19, "name" : "Tannu", "mobile" : 7779898912, "dept" : "silicon valley", "salary" : 20080 }
+{ "_id" : ObjectId("61cab5fce1c33af5e5507c22"), "id" : 20, "name" : "Gudiya", "mobile" : 8999898912, "dept" : "batch5", "salary" : 27000 }
+
+3
+> db.employee.find({},{name:1,dept:1,_id:0})
+{ "name" : "Mansi", "dept" : "silicon valley" }
+{ "name" : "Vansh", "dept" : "dynamite" }
+{ "name" : "Vanshika", "dept" : "silicon valley" }
+{ "name" : "Vinu", "dept" : "tokyo" }
+{ "name" : "Vinita", "dept" : "dynamite" }
+{ "name" : "Vinay", "dept" : "tokyo" }
+{ "name" : "Vinit", "dept" : "silicon valley" }
+{ "name" : "khushi", "dept" : "batch5" }
+{ "name" : "Tannu", "dept" : "silicon valley" }
+{ "name" : "Gudiya", "dept" : "batch5" }
+
+4
+> db.employee.find({},{name:1,salary:1,_id:0})
+{ "name" : "Mansi", "salary" : 20000 }
+{ "name" : "Vansh", "salary" : 25000 }
+{ "name" : "Vanshika", "salary" : 29000 }
+{ "name" : "Vinu", "salary" : 33000 }
+{ "name" : "Vinita", "salary" : 22000 }
+{ "name" : "Vinay", "salary" : 20500 }
+{ "name" : "Vinit", "salary" : 20900 }
+{ "name" : "khushi", "salary" : 2000 }
+{ "name" : "Tannu", "salary" : 20080 }
+{ "name" : "Gudiya", "salary" : 27000 }
+> 
+
+5
+> db.employee.find({dept:"tokyo"},{name: 1, _id: 0})
+{ "name" : "Vinu" }
+{ "name" : "Vinay" }
+
+6
+>db.employee.find({dept:"tokyo",salary: {$gt: 25000}},{name:1,_id:0})
+{ "name" : "Vinu" }
+
+7
+> db.employee.find({dept:"dynamite"},{name: 1,mobile:1, _id: 0})
+{ "name" : "Vansh", "mobile" : 8272798912 }
+{ "name" : "Vinita", "mobile" : 9555558912 }
+> 
+
+8
+> db.employee.find({dept:{$ne:"dynamite"}},{name: 1, _id: 0})
+{ "name" : "Mansi" }
+{ "name" : "Vanshika" }
+{ "name" : "Vinu" }
+{ "name" : "Vinay" }
+{ "name" : "Vinit" }
+{ "name" : "khushi" }
+{ "name" : "Tannu" }
+{ "name" : "Gudiya" }
+> 
+ 
+9
+> db.employee.find({dept:{$in:["tokyo","dynamite","silicon valley"]},salary: {$gt: 20000}},{name:1,_id:0})
+{ "name" : "Vansh" }
+{ "name" : "Vanshika" }
+{ "name" : "Vinu" }
+{ "name" : "Vinita" }
+{ "name" : "Vinay" }
+{ "name" : "Vinit" }
+{ "name" : "Tannu" }
+
+
+10
+> db.employee.find({id:{$gt:17}},{name: 1, _id: 0})
+{ "name" : "khushi" }
+{ "name" : "Tannu" }
+{ "name" : "Gudiya" }
+> 
+
+11
+> db.employee.find({$and :[{salary:{$lt:30000},salary:{$gt:25000}}]},{name: 1, _id: 0})
+{ "name" : "Vanshika" }
+{ "name" : "Vinu" }
+{ "name" : "Gudiya" }
+
+12
+> db.employee.find().sort({"dept":-1})
+{ "_id" : ObjectId("61cab5fce1c33af5e5507c1c"), "id" : 14, "name" : "Vinu", "mobile" : 9888898912, "dept" : "tokyo", "salary" : 33000 }
+{ "_id" : ObjectId("61cab5fce1c33af5e5507c1e"), "id" : 16, "name" : "Vinay", "mobile" : 8999889912, "dept" : "tokyo", "salary" : 20500 }
+{ "_id" : ObjectId("61cab5fce1c33af5e5507c19"), "id" : 11, "name" : "Mansi", "mobile" : 9879898912, "dept" : "silicon valley", "salary" : 20000 }
+{ "_id" : ObjectId("61cab5fce1c33af5e5507c1b"), "id" : 13, "name" : "Vanshika", "mobile" : 7988898912, "dept" : "silicon valley", "salary" : 29000 }
+{ "_id" : ObjectId("61cab5fce1c33af5e5507c1f"), "id" : 17, "name" : "Vinit", "mobile" : 8779898912, "dept" : "silicon valley", "salary" : 20900 }
+{ "_id" : ObjectId("61cab5fce1c33af5e5507c21"), "id" : 19, "name" : "Tannu", "mobile" : 7779898912, "dept" : "silicon valley", "salary" : 20080 }
+{ "_id" : ObjectId("61cab5fce1c33af5e5507c1a"), "id" : 12, "name" : "Vansh", "mobile" : 8272798912, "dept" : "dynamite", "salary" : 25000 }
+{ "_id" : ObjectId("61cab5fce1c33af5e5507c1d"), "id" : 15, "name" : "Vinita", "mobile" : 9555558912, "dept" : "dynamite", "salary" : 22000 }
+{ "_id" : ObjectId("61cab5fce1c33af5e5507c20"), "id" : 18, "name" : "khushi", "mobile" : 9898988812, "dept" : "batch5", "salary" : 2000 }
+{ "_id" : ObjectId("61cab5fce1c33af5e5507c22"), "id" : 20, "name" : "Gudiya", "mobile" : 8999898912, "dept" : "batch5", "salary" : 27000 }
+> 
+
+13
+> Date()
+Wed Dec 29 2021 13:58:09 GMT+0530 (IST)
+
+14
+> db.employee.find({ $or: [ { salary: { $lt: 20500 } }, { dept:"silicon valley" }]},{name:1,_id:0})
+{ "name" : "Mansi" }
+{ "name" : "Vanshika" }
+{ "name" : "Vinit" }
+{ "name" : "khushi" }
+{ "name" : "Tannu" }
+> 
+
+15
+> db.employee.find({name:{$regex: /^M/ }},{name:1,_id:0})
+{ "name" : "Mansi" }
+>
+
+16
+> db.employee.find({name:{$regex: /i$/ }},{name:1,_id:0})
+{ "name" : "Mansi" }
+{ "name" : "khushi" }
+
+17
+>  db.employee.find({name:{$regex: /^.i/ }},{name:1,_id:0})
+{ "name" : "Vinu" }
+{ "name" : "Vinita" }
+{ "name" : "Vinay" }
+{ "name" : "Vinit" }
+> 
+
+18
+> db.employee.find({$where:"this.name.length==5"},{name:1,_id:0})
+{ "name" : "Mansi" }
+{ "name" : "Vansh" }
+{ "name" : "Vinay" }
+{ "name" : "Vinit" }
+{ "name" : "Tannu" }
+> 
+
+19
+> db.employee.find({dept:{$ne: "silicon valley" }},{name:1,_id:0})
+{ "name" : "Vansh" }
+{ "name" : "Vinu" }
+{ "name" : "Vinita" }
+{ "name" : "Vinay" }
+{ "name" : "khushi" }
+{ "name" : "Gudiya" }
+> 
+
+20
+> db.employee.find({dept:{$nin: ["silicon valley","dynamite"] }},{name:1,_id:0})
+
+{ "name" : "Vinu" }
+{ "name" : "Vinay" }
+{ "name" : "khushi" }
+{ "name" : "Gudiya" }
+
+
+21
+> db.employee.aggregate({$count:"sum"})
+{ "sum" : 10 }
+> 
+
+22
+> db.employee.aggregate([{$group:{_id:null,count:{$sum:"$salary"}}}])
+{ "_id" : null, "count" : 219480 }
+> 
+
+23
+> db.employee.aggregate([{$group:{_id:null,count:{$avg:"$salary"}}}])
+{ "_id" : null, "count" : 21948 }
+
+
+24
+> db.employee.aggregate([{$group:{_id:null,count:{$min:"$salary"}}}])
+{ "_id" : null, "count" : 2000 }
+
+
+25
+> db.employee.aggregate([{$group:{_id:null,count:{$max:"$salary"}}}])
+{ "_id" : null, "count" : 33000 }
+
+26
+> db.employee.aggregate({$match:{dept:"silicon valley"}},{$group:{_id:null,count:{$max:"$salary"}}})
+{ "_id" : null, "count" : 29000 }
+
+27
+> db.employee.aggregate({$match:{dept:"silicon valley"}},{$group:{_id:null,count:{$min:"$salary"}}})
+{ "_id" : null, "count" : 20000 }
+> 
+
+28
+> db.employee.aggregate({$match:{dept:"silicon valley"}},{$group:{_id:null,count:{$avg:"$salary"}}})
+{ "_id" : null, "count" : 22495 }
+
+29
+> db.employee.aggregate({$match:{dept:"silicon valley"}},{$group:{_id:null,count:{$sum:"$salary"}}})
+{ "_id" : null, "count" : 89980 }
+
+30
+> db.employee.find({},{name:1,salary:1,_id:0}).sort({"salary":1})
+{ "name" : "khushi", "salary" : 2000 }
+{ "name" : "Mansi", "salary" : 20000 }
+{ "name" : "Tannu", "salary" : 20080 }
+{ "name" : "Vinay", "salary" : 20500 }
+{ "name" : "Vinit", "salary" : 20900 }
+{ "name" : "Vinita", "salary" : 22000 }
+{ "name" : "Vansh", "salary" : 25000 }
+{ "name" : "Gudiya", "salary" : 27000 }
+{ "name" : "Vanshika", "salary" : 29000 }
+{ "name" : "Vinu", "salary" : 33000 }
+
+
+31
+> db.employee.find({},{name:1,salary:1,_id:0}).sort({"salary":-1})
+{ "name" : "Vinu", "salary" : 33000 }
+{ "name" : "Vanshika", "salary" : 29000 }
+{ "name" : "Gudiya", "salary" : 27000 }
+{ "name" : "Vansh", "salary" : 25000 }
+{ "name" : "Vinita", "salary" : 22000 }
+{ "name" : "Vinit", "salary" : 20900 }
+{ "name" : "Vinay", "salary" : 20500 }
+{ "name" : "Tannu", "salary" : 20080 }
+{ "name" : "Mansi", "salary" : 20000 }
+{ "name" : "khushi", "salary" : 2000 }
+> 
+
+32
+> db.employee.find({},{name:1,salary:1,mobile:1,dept:1,_id:0}).sort({"name":1})
+{ "name" : "Gudiya", "mobile" : 8999898912, "dept" : "batch5", "salary" : 27000 }
+{ "name" : "Mansi", "mobile" : 9879898912, "dept" : "silicon valley", "salary" : 20000 }
+{ "name" : "Tannu", "mobile" : 7779898912, "dept" : "silicon valley", "salary" : 20080 }
+{ "name" : "Vansh", "mobile" : 8272798912, "dept" : "dynamite", "salary" : 25000 }
+{ "name" : "Vanshika", "mobile" : 7988898912, "dept" : "silicon valley", "salary" : 29000 }
+{ "name" : "Vinay", "mobile" : 8999889912, "dept" : "tokyo", "salary" : 20500 }
+{ "name" : "Vinit", "mobile" : 8779898912, "dept" : "silicon valley", "salary" : 20900 }
+{ "name" : "Vinita", "mobile" : 9555558912, "dept" : "dynamite", "salary" : 22000 }
+{ "name" : "Vinu", "mobile" : 9888898912, "dept" : "tokyo", "salary" : 33000 }
+{ "name" : "khushi", "mobile" : 9898988812, "dept" : "batch5", "salary" : 2000 }
+> 
+
 
