@@ -865,3 +865,70 @@ Wed Dec 29 2021 13:58:09 GMT+0530 (IST)
 > 
 
 
+33. DISPLAY DEPARTMENT NUMBERS AND TOTAL SALARY FOR EACH
+DEPARTMENT
+> db.employee.aggregate([{$group : {_id : "$dept", salary : {$sum : "$salary"}}}])
+{ "_id" : "batch5", "salary" : 29000 }
+{ "_id" : "dynamite", "salary" : 47000 }
+{ "_id" : "tokyo", "salary" : 53500 }
+{ "_id" : "silicon valley", "salary" : 89980 }
+
+
+34. DISPLAY DEPT NUMBERS AND TOTAL NUMBER OF EMPLOYEES WITHIN EACH
+GROUP
+> db.employee.aggregate([{$group : {_id : "$dept", employee_in_dept :{$sum:1 }}}])
+{ "_id" : "batch5", "employee_in_dept" : 2 }
+{ "_id" : "dynamite", "employee_in_dept" : 2 }
+{ "_id" : "tokyo", "employee_in_dept" : 2 }
+{ "_id" : "silicon valley", "employee_in_dept" : 4 }
+> 
+
+
+35. DISPLAY DEPARTMENT NUMBERS AND MAXIMUM SALARY FOR EACH
+DEPARTMENT
+> db.employee.aggregate([{$group : {_id : "$dept", max_salary_in_dept : {$max : "$salary"}}}])
+{ "_id" : "batch5", "max_salary_in_dept" : 27000 }
+{ "_id" : "dynamite", "max_salary_in_dept" : 25000 }
+{ "_id" : "tokyo", "max_salary_in_dept" : 33000 }
+{ "_id" : "silicon valley", "max_salary_in_dept" : 29000 }
+> 
+
+36. DISPLAY EACH JOB ALONG WITH MINIMUM SAL BEING PAID IN EACH JOB
+GROUP
+> db.employee.aggregate([{$group : {_id : "$dept", min_salary_in_dept : {$min : "$salary"}}}])
+{ "_id" : "batch5", "min_salary_in_dept" : 2000 }
+{ "_id" : "dynamite", "min_salary_in_dept" : 22000 }
+{ "_id" : "tokyo", "min_salary_in_dept" : 20500 }
+{ "_id" : "silicon valley", "min_salary_in_dept" : 20000 }
+> 
+
+37. DISPLAY THE VARIOUS JOBS ALONG WITH TOTAL SAL FOR EACH OF THE JOBS
+WHERE TOTAL SALIS GREATER THAN 40000
+
+> db.employee.aggregate([{$group : {_id : "$dept", total_salary : {$sum : "$salary"}}},{$match:{total_salary:{$gt:40000}}}])
+{ "_id" : "dynamite", "total_salary" : 47000 }
+{ "_id" : "tokyo", "total_salary" : 53500 }
+{ "_id" : "silicon valley", "total_salary" : 89980 }
+> 
+
+
+38. DISPLAY THE VARIOUS JOBS ALONG WITH TOTAL NUMBER OF EMPLOYEES IN
+EACH JOB. THE OUTPUT SHOULD CONTAIN ONLY THOSE JOBS WITH MORE
+THAN THREE EMPLOYEES
+> db.employee.aggregate([{$group : {_id : "$dept", total_emp : {$sum :1}}},{$match:{total_emp:{$gt:3}}}])
+{ "_id" : "silicon valley", "total_emp" : 4 }
+
+39. DISPLAY THE NAME OF EMP WHO EARNS HIGHEST SAL.
+> db.employee.find({},{name:1,salary:1,_id:0}).sort({"salary":-1}).limit(1)
+{ "name" : "Vinu", "salary" : 33000 }
+
+
+40. DISPLAY THE NAMES OF THE EMPLOYEES WHO EARN HIGHEST SALARY IN
+THEIR RESPECTIVE DEPARTMENTS.
+> db.employee.aggregate([{$group : {_id : "$dept", name: {$first: "$name"}, max_salary_in_dept : {$max : "$salary"}}}])
+{ "_id" : "batch5", "name" : "khushi", "max_salary_in_dept" : 27000 }
+{ "_id" : "dynamite", "name" : "Vansh", "max_salary_in_dept" : 25000 }
+{ "_id" : "tokyo", "name" : "Vinu", "max_salary_in_dept" : 33000 }
+{ "_id" : "silicon valley", "name" : "Mansi", "max_salary_in_dept" : 29000 }
+> 
+
